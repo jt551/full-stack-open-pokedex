@@ -4,7 +4,7 @@ const app = express()
 // Heroku dynamically sets a port
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5000
-var unusedvar = 1
+
 app.use(express.static('dist'))
 
 app.get('/health', (req, res) => {
@@ -12,7 +12,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('11.17') // change this string to ensure a new version deployed
+  res.send('11.19') // change this string to ensure a new version deployed
 })
 
 app.listen(PORT, () => {
