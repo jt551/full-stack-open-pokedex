@@ -1,9 +1,8 @@
 name: Daily health check
 
 on:
-  push:
-    branches:
-      - '**'
+  schedule:
+    - cron: '30 14 * * *'
     
 jobs:
   simple_health_check:
